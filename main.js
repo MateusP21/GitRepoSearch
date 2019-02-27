@@ -5,7 +5,7 @@ function git() {
 
     .then(function (response) {
       var ul = document.createElement("ul")
-      console.log(response)
+
       for (repo in response.data) {
         lista.innerHTML=''
 
@@ -23,8 +23,7 @@ function git() {
     })
 
     .catch(function (error) {
-      console.log(error)
-
+      lista.innerHTML = ''
       var ul = document.createElement("ul")
       var li = document.createElement("li")
       var textError = document.createTextNode("Desculpe este usuario não existe :( ")
@@ -34,3 +33,12 @@ function git() {
 
     })
 }
+
+// CHAMANDO A FUNÇÃO DE BUSCAR
+document.querySelector("body").onkeypress = function(e){
+  if (e.keyCode == 13) {
+    git();
+  }
+}
+
+document.querySelector("button").onclick = git;

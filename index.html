@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,21 +12,25 @@
 
 
 </head>
+
 <body>
 
     <div class="container">
         <div class="header-container">
             <img class='git-icon' src="https://img.icons8.com/ios-glyphs/96/000000/github.png">
-        <h1 class="title">GitRepoSearch</h1>
+            <h1 class="title">GitRepoSearch</h1>
         </div>
-    <input type="text" name="user" placeholder="Digite o nome do usuario"> <button onclick="git()">Enviar</button>
+        <div class="body-container">
+            <input type="text" name="user" placeholder="Digite o nome do usuario">
+            <button >Buscar</button>
+        </div>
+    </div>
+    <div id="lista">
+
 
     </div>
-    <div id= "lista" >
-        
-
-    </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-    <script src="main.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>

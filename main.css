@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(20, 83, 220);
+    background-color: #414142;
     margin: 0;
     padding: 0;
     font-family: 'Titillium Web', sans-serif;
@@ -13,18 +13,21 @@ body {
     margin-bottom: 0%;
     padding: 5%;
     border-radius: 12px 12px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 
 #lista {
     text-align: left;
-    background-color: #ffffff;
+    background-color: #eeeded;
     margin: 0% 10%;
     margin-bottom: 2%;
     padding: 1%;
     border-top: 1px dotted black;
-
     color: rgb(10, 10, 10);
-    /* border-radius: 0px 0px 12px 12px; */
+
 }
 
 #lista li {
@@ -33,29 +36,37 @@ body {
 
 }
 
-/* #lista li:hover {
-    padding: 1%;
-    background-color: #16d5f7;
-
-} */
-
 ul {
     list-style-type: none;
 }
 
 a {
-    color: rgb(34, 34, 32);
+    color: rgb(156, 154, 154);
     text-decoration: none;
-    padding:0% 2%;
-    border-radius: 9px ;
+    padding: 0% 2%;
+    border-radius: 9px;
 }
 
-a:hover{
-    background-color: rgb(84, 209, 0);
+a:hover {
+    font-weight: bold;
+    color: #282828
 }
+
 .git-icon {
-    margin-bottom:-38px;
+    margin-bottom: -38px;
 }
+
 .title {
     font-size: 2.5rem;
+}
+
+input {
+    padding: 4px;
+    float: left;
+}
+
+button {
+    padding: 6px;
+    border: none;
+    float: right;
 }
