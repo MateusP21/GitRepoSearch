@@ -3,26 +3,28 @@ const button = document.querySelector("button");
 const lista = document.querySelector("ul");
 async function git() {
   lista.innerHTML = "";
-  const usuario = document.querySelector("input").value;
+  let usuario = document.querySelector("input").value;
   const usuarioInfo = document.getElementById("user-info");
-
   const profileImage = document.createElement("img");
   const userName = document.createElement("h1");
 
   async function fetchData(user) {
     if (user === "") return alert("O campo usuario está vazio");
-    const response = await fetch(`https://api.github.com/users/${user}/repos`);
-    const githubData = await response.json();
+    const githubData = await (
+      await fetch(`https://api.github.com/users/${user}/repos`)
+    ).json();
+
     return githubData;
   }
 
   const createList = (data) => {
-    const text = document.createTextNode(
-      "Desculpe este usuario não existe :( "
-    );
-
+    if (data.message) {
+      alert(" Desculpe este usuario não existe :( ");
+      document.location.reload();
+    }
     for (repo of data) {
       // informações do usuario
+      console.log(repo);
       usuarioInfo.innerHTML = "";
       profileImage.src = repo.owner.avatar_url;
       userName.textContent = repo.owner.login;
