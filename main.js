@@ -24,7 +24,6 @@ async function git() {
     }
     for (repo of data) {
       // informações do usuario
-      console.log(repo);
       usuarioInfo.innerHTML = "";
       profileImage.src = repo.owner.avatar_url;
       userName.textContent = repo.owner.login;
